@@ -73,9 +73,15 @@ function! s:RefactorSelectionToSnippet() abort
     let line_count = line_count - 1
   endif
 
-  let failed = append(line_count, [""] + stripped_lines + closing_lines)
+  let leading_lines = []
 
-  call setpos('.', [0, line_count + 2, 0, 0])
+  if (line_count > 0)
+    let leading_lines = [""]
+  end
+
+  let failed = append(line_count, leading_lines + stripped_lines + closing_lines)
+
+  call setpos('.', [0, line_count + 1 + len(leading_lines), 0, 0])
   silent exe "normal! O"
   silent exe "startinsert!"
   call feedkeys('snippet', 'n')
