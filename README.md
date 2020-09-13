@@ -11,7 +11,7 @@ I had to stop using coc-snippets because of its lack of python support in snippe
 Add to your vim plugin manager:
 
 ```vim
-Plug 'brandoncc/ultisnips-refactor.vim
+Plug 'brandoncc/ultisnips-refactor.vim'
 ```
 
 Add a mapping to `<Plug>ultisnips-refactor`. I like the mnemonic "sc" for "snippet create":
