@@ -42,11 +42,9 @@ function! s:SkeletonContents() abort
 endfunction
 
 function! s:SetNewBufferContent() abort
-  if exists("g:ultisnips_refactor_no_documentation")
-    finish
+  if !exists("g:ultisnips_refactor_no_documentation")
+    call nvim_buf_set_lines(0, 0, 0, 0, s:SkeletonContents())
   end
-
-  call nvim_buf_set_lines(0, 0, 0, 0, s:SkeletonContents())
 endfunction
 
 function! s:RefactorSelectionToSnippet() abort
