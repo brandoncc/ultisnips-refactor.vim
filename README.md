@@ -17,7 +17,7 @@ Plug 'brandoncc/ultisnips-refactor.vim'
 Add a mapping to `<Plug>ultisnips-refactor`. I like the mnemonic "sc" for "snippet create":
 
 ```vim
-nnoremap <Leader>sc <Plug>ultisnips-refactor
+xmap <Leader>sc <Plug>ultisnips-refactor
 ```
 
 ### Options
