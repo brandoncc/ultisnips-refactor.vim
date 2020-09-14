@@ -23,7 +23,7 @@ xmap <Leader>sc <Plug>ultisnips-refactor
 ### Options
 ---
 
-By default, snippet [documentation](templates/documentation) is added to the
+By default, snippet [documentation](templates/documentation.txt) is added to the
 top of any new `*.snippets` file. If you would like to disable this feature,
 use `g:ultisnips_refactor_no_documentation`:
 
